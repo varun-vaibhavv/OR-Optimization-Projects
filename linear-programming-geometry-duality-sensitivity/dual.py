@@ -1,4 +1,4 @@
-from pulp import LpMaximize, LpProblem, LpVariable, value
+from pulp import LpMaximize, LpProblem, LpVariable, value, PULP_CBC_CMD
 
 def solve_dual():
     dual = LpProblem("Dual_LP", LpMaximize)
@@ -10,7 +10,7 @@ def solve_dual():
     dual += y1 + 3*y2 >= 3
     dual += 2*y1 + 2*y2 >= 5
 
-    dual.solve()
+    dual.solve(PULP_CBC_CMD(msg=False))
 
     return {
         "y1": value(y1),

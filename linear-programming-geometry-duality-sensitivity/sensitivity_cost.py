@@ -1,4 +1,4 @@
-from pulp import LpMaximize, LpProblem, LpVariable, value
+from pulp import LpMaximize, LpProblem, LpVariable, value, PULP_CBC_CMD
 
 def cost_sensitivity():
     model = LpProblem("Cost_Sensitivity", LpMaximize)
@@ -10,6 +10,6 @@ def cost_sensitivity():
     model += x1 + 2*x2 <= 8
     model += 3*x1 + 2*x2 <= 12
 
-    model.solve()
+    model.solve(PULP_CBC_CMD(msg=False))
 
     return value(x1), value(x2), value(model.objective)

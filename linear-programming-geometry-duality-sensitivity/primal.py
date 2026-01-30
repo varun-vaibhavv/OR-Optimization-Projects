@@ -1,4 +1,4 @@
-from pulp import LpMaximize, LpProblem, LpVariable, value
+from pulp import LpMaximize, LpProblem, LpVariable, value, PULP_CBC_CMD
 
 def solve_primal():
     model = LpProblem("Primal_LP", LpMaximize)
@@ -10,7 +10,7 @@ def solve_primal():
     model += x1 + 2*x2 <= 8
     model += 3*x1 + 2*x2 <= 12
 
-    model.solve()
+    model.solve(PULP_CBC_CMD(msg=False))
 
     return {
         "x1": value(x1),
