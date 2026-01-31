@@ -25,21 +25,21 @@ computation.
 
 ---
 
-### 2. Dual Simplex, Transportation & Assignment Problems
+### 2. Transportation & Assignment Problems
 Exploration of algorithmic and structured linear programming problems,
-including the dual simplex method and network-based optimization models.
+including network-based optimization models.
 
 **Status:** Completed  
-**Tools:** Python, PuLP
+**Tools:** Python, PuLP,NumPy, Matplotlib
 
 ---
 
-### 3. Least Squares Curve Fitting Using SciPy
+### 3. Least Squares Curve Fitting
 Numerical study of parameter estimation using the least squares principle,
 including linear, polynomial, and nonlinear curve fitting, with residual
 analysis.
 
-**Status:** In Progress (expected completion: early February 2026)  
+**Status:** Completed
 **Tools:** Python, NumPy, SciPy, Matplotlib
 
 ---
@@ -48,8 +48,8 @@ analysis.
 Coursework-aligned project focusing on integer linear programming models,
 branch-and-bound methods, and applications to scheduling and logistics.
 
-**Status:** Planned
-**Tools:** Python, PuLP
+**Status:** In Progress (expected completion: early February 2026)
+**Tools:** Python, PuLP, NumPy, Matplotlib
 
 ---
 
